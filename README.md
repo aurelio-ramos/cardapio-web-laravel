@@ -30,7 +30,15 @@ Cardapio Web - permite aos clientes consultarem de forma virtual os produtos for
 
 ### Pré-requisitos
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Laravel](https://laravel.com/docs/8.x/installation) e [Node.js](https://nodejs.org/en/). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Laravel](https://laravel.com/docs/8.x/installation) e [Node.js](https://nodejs.org/en/).
+
+As seguintes dependências foram usadas no projeto:
+- [Módulo de linguagem Português do Brasil (pt_BR) para Laravel](https://github.com/lucascudo/laravel-pt-BR-localization)
+- [Laravel Fortify](https://github.com/laravel/fortify)
+- [Laravel Permission](https://github.com/spatie/laravel-permission)
+- [Laravel UI](https://github.com/laravel/ui)
+
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
 ### 🎲 Rodando o Projeto 
@@ -66,13 +74,13 @@ $ npm install && npm run dev
 #### Rodando o servidor
 ```bash    
 # Criação de nova chave de criptografia da aplicação:
-    php artisan key:generate
+php artisan key:generate
     
 # Criação das tabelas e inserção dos dados no banco de dados:
 php artisan migrate:fresh --force --seed
 
 # Execute a aplicação em modo de desenvolvimento
-$ php artisan serve
+php artisan serve
 
 # O servidor iniciará na porta:8000 - acesse <http://localhost:8000>
 ```
@@ -87,7 +95,7 @@ Acesso à área privada da aplicação:
 **Criar usuário pelo terminal usando tinker:**
 ```bash
 # Executar o tinker
-$ php artisan tinker
+php artisan tinker
 
 # No tinker: 
 >>> $user = new \App\Models\User;
@@ -116,4 +124,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+Este projeto é um software de código aberto licenciado sob a licença [gnu general public license version 3.0 (gplv3)](./LICENSE).
