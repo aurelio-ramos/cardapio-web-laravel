@@ -2,12 +2,11 @@
 
 @section('content')
 <main class="container vh-100">
-    <div class="row h-50 justify-content-center align-items-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
-                <div class="card-body">
+    <div class="row h-100 d-flex align align-items-center">
+        <section class="col-12 col-md-6">
+          <img src="{{ asset('img/undraw_auth.svg') }}" alt="imagem login" class="figure-img img-fluid rounded"> 
+        </section>
+        <section class="col-12 col-md-6 p-5 bg-light">
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
 
@@ -57,7 +56,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </section>
             </div>
         </div>
     </div>

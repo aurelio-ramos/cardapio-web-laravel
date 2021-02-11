@@ -10,8 +10,9 @@
         <section class="col-12 col-md-6">
           <img src="{{ asset('img/undraw_auth.svg') }}" alt="imagem login" class="figure-img img-fluid rounded"> 
         </section>
-        <section class="col-12 col-md-6 p-5 bg-light">            
-            <form action="{{ route('login') }}" method="POST">
+        <section class="col-12 col-md-6 p-0 bg-light">
+            <div class="card-header p-3">{{ __('Login') }}</div>            
+            <form action="{{ route('login') }}" method="POST" class="p-5">
                 @csrf
                 <div class="form-floating mb-3">
                     <input id="email" type="email" name="email" class="form-control @error('email') is-invalid @enderror"  value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -24,16 +25,16 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password" name="password" required autocomplete="current-password">
-                    <label for="floatingPassword">{{ __('Password') }}</label>
+                    <input id="password" name="password" type="password" placeholder="{{ __('Password') }}" class="form-control @error('password') is-invalid @enderror" required autocomplete="current-password">
+                    <label for="password">{{ __('Password') }}</label>
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
-                <div class="form-group row">
-                    <div class="col-md-6 offset-md-4">
+                <div class="form-floating mb-3">
+                    
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -41,11 +42,11 @@
                                 {{ __('Remember Me') }}
                             </label>
                         </div>
-                    </div>
+                    
                 </div>
 
-                <div class="form-group row mb-0">
-                    <div class="col-md-8 offset-md-4">
+                <div class="form-floating mb-3">
+                    <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Login') }}
                         </button>
@@ -54,10 +55,11 @@
                             <a class="btn btn-link" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
                             </a>
-                        @endif
-                        
+                        @endif                        
                     </div>
-                    <hr class="my-3 col">                            
+                </div>              
+                <div class="form-group row m-0">                    
+                    <hr class="mt-3 mb-0 col">                            
                     @if (Route::has('register'))
                         <a class="mt-5 btn btn-success" href="{{ route('register') }}">
                             {{ __('Register') }}
