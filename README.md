@@ -33,8 +33,6 @@ Cardapio Web - permite aos clientes consultarem de forma virtual os produtos for
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Laravel](https://laravel.com/docs/8.x/installation) e [Node.js](https://nodejs.org/en/).
 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-
 ### 🎲 Rodando o Projeto 
 
 #### Instalando as dependências
