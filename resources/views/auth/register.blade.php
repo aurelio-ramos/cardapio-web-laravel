@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<main class="container vh-100">
+    <div class="row h-50 justify-content-center align-items-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -66,6 +66,11 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                @if (Route::has('login'))
+                                    <a class="btn btn-link" href="{{ route('login') }}">
+                                        {{ __('Login if already registered') }}
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </form>
@@ -73,5 +78,5 @@
             </div>
         </div>
     </div>
-</div>
+</main>
 @endsection

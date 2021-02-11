@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<main class="container vh-100">
+    <div class="row h-50 justify-content-center align-items-center">
+        <div class="col-lg-6">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -62,12 +62,20 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                
                             </div>
+                            <hr class="my-3 col">                            
+                            @if (Route::has('register'))
+                                <a class="btn btn-success" href="{{ route('register') }}">
+                                    {{ __('Register') }}
+                                </a>
+                            @endif
+                            
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</main>
 @endsection
