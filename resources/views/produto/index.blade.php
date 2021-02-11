@@ -1,8 +1,18 @@
 @extends('layouts.app')
 @section('title','dashboard')
 
+  
+@section('header')
+<header class="container-fluid p-3">
+    <h1 class="display-6 mb-3">Produtos</h1>
+    @auth  
+    <a href="/public/pages/produto/form.php" class="btn btn-primary">Cadastrar Produto</a>    
+    @endauth
+</header>
+@endsection
+
+
 @section('main')
-<a href="/public/pages/produto/form.php" class="btn btn-primary mb-3">Cadastrar Produto</a>
 <table class="table">
     <thead>
       <tr>
