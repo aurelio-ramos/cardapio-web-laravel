@@ -26,7 +26,7 @@ Route::get('/produtos', function () {
 
 Route::get('/produtos/create', function () {
     return view('produto.form');
-});
+})->name('produtos.create');
 //GET/produtos, aponta para o método index(),
 //GET /produtos/create, aponta para o método create(),
 //POST /produtos, aponta para o método store(),
